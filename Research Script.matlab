@@ -1,9 +1,9 @@
 clear all
 close all
 sample_rate = 2000; %sampling rate
-multV = 1000; %convert to mV(10000) or V(100)
+multV = 10000; %convert to mV(10000) or V(100)
 ylbl = "Volts(V)";
-ylm = 10; %y amplitude limit on axis
+ylm = 2; %y amplitude limit on axis
 xlm = 5; %number of seconds displayed
 H=dsp.AudioRecorder('BufferSizeSource','Property','BufferSize',100,'SamplesPerFrame',100,'SampleRate',sample_rate,'NumChannels',1);
 A=animatedline;
@@ -28,15 +28,15 @@ pausebtn = uicontrol('style','pushbutton',...
               'callback', @PauseButton, ...
               'position',[75 0 70 25], ...
               'UserData', 1);
-          data = zeros(1, 100);
+          data = zeros(1, 10);
 i = 1;
 avg = 0;
 while get(stopbtn, 'UserData') == 1
   if get(pausebtn, 'UserData') == 1
-   frame= step(H);
+   frame= -1 * step(H);
    frame = frame / 2 * multV;
    data(i) = frame(i);
-   peaks = findpeaks(data);
+   peaks = findpeaks(data,'Threshold', 0.25);
    avg = mean(peaks);
    if(i == 100)
         i = 0;
