@@ -28,17 +28,26 @@ pausebtn = uicontrol('style','pushbutton',...
               'callback', @PauseButton, ...
               'position',[75 0 70 25], ...
               'UserData', 1);
-          data = zeros(1, 10);
+          avgpeaks = zeros(1, 10);
+          maxdata = zeros(1, 100);
+          maxdata(1) = 2;
 i = 1;
+j = 1;
 avg = 0;
 while get(stopbtn, 'UserData') == 1
   if get(pausebtn, 'UserData') == 1
    frame= -1 * step(H);
    frame = frame / 2 * multV;
-   data(i) = frame(i);
-   peaks = findpeaks(data,'Threshold', 0.25);
-   avg = mean(peaks);
+   %data(i) = frame(i);
+   peaks = findpeaks(frame);%,'Threshold', 0.25);
+   %avg = mean(peaks);
+   avgpeaks(j) = mean(peaks);
+   avg = mean(avgpeaks);
+   maxdata(i) = max(frame);
    if(i == 100)
+        i = 0;
+   end
+    if(j == 10)
         i = 0;
     end
     i = i + 1;
@@ -54,7 +63,7 @@ while get(stopbtn, 'UserData') == 1
    drawnow %limitrate
    m=m+S;
    x = t(1);
-   axis([x-xlm x -1*ylm ylm])
+   axis([x-xlm x -1*max(maxdata)*1.1 max(maxdata)*1.1])
    %ylim([-100 100]);
    %set(gca, 'XLim', [M-m, m+S], 'YLim', [-100. 100]);
   end
