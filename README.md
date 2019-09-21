@@ -6,7 +6,7 @@ Data was colleted from a high impedence amplifier and charge amplifier primarily
 
 ### Video [Link](https://drive.google.com/open?id=1d_wU6L8UE6b3WmB4g6kxvoqGOm9R223f)  
   
-### [Sensor](https://sleepsense.com/shop/sleepsense-respiratory-effort-sensors/piezo-beltless-effort-sensor-infant-safety-din-connectors/) Used:  
+### Sensor Used: [Piezo Beltless Effort Sensor, Child Small / Safety DIN Connectors](https://sleepsense.com/shop/sleepsense-respiratory-effort-sensors/piezo-beltless-effort-sensor-infant-safety-din-connectors/)   
 ![Sensor](https://github.com/gnodipac886/MATLAB_microphone_input/blob/master/Images/Sensor.png?raw=true)  
   
 ### High Impedence Amplifier:  
