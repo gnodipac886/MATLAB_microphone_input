@@ -3,8 +3,10 @@ This project is built for reading and plotting analog signal input from the micr
 This script is able to detect the peaks of the input data from the microphone and plot out the average of the previous 10 peaks.  
   
 Data was colleted from a high impedence amplifier and charge amplifier primarily designed for a medical use piezoelecctric respiration sensor.  
+
+### Video [Link](https://drive.google.com/open?id=1d_wU6L8UE6b3WmB4g6kxvoqGOm9R223f)  
   
-### Sensor Used:  
+### [Sensor](https://sleepsense.com/shop/sleepsense-respiratory-effort-sensors/piezo-beltless-effort-sensor-infant-safety-din-connectors/) Used:  
 ![Sensor](https://github.com/gnodipac886/MATLAB_microphone_input/blob/master/Images/Sensor.png?raw=true)  
   
 ### High Impedence Amplifier:  
@@ -19,4 +21,3 @@ Data was colleted from a high impedence amplifier and charge amplifier primarily
 ### Charge Amplifier Implementation:  
 ![Charge Amp Implementation](https://github.com/gnodipac886/MATLAB_microphone_input/blob/master/Images/Charge%20Amp%20Implementation.png?raw=true)
 
-### Video [Link](https://drive.google.com/open?id=1d_wU6L8UE6b3WmB4g6kxvoqGOm9R223f)
