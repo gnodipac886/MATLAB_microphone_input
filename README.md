@@ -5,7 +5,6 @@ This script is able to detect the peaks of the input data from the microphone an
 Data was colleted from a high impedence amplifier and charge amplifier primarily designed for a medical use piezoelecctric respiration sensor.  
 
 ### Video [Link](https://drive.google.com/open?id=1d_wU6L8UE6b3WmB4g6kxvoqGOm9R223f)  
----  
 ### Sensor Used: [Piezo Beltless Effort Sensor](https://sleepsense.com/shop/sleepsense-respiratory-effort-sensors/piezo-beltless-effort-sensor-infant-safety-din-connectors/)   
 ![Sensor](https://github.com/gnodipac886/MATLAB_microphone_input/blob/master/Images/Sensor.png?raw=true)  
 ---  
